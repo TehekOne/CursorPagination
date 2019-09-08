@@ -1,15 +1,15 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination;
+namespace TehekOne\CursorPagination;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
-use TehekOne\LaravelCursorPagination\Pagination\Paginator;
+use TehekOne\CursorPagination\Pagination\Paginator;
 
 /**
  * Class CursorPaginationServiceProvider
  *
- * @package TehekOne\LaravelCursorPagination
+ * @package TehekOne\CursorPagination
  */
 class CursorPaginationServiceProvider
 {

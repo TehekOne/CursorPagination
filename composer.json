@@ -1,7 +1,7 @@
 {
-  "name": "tehekone/laravelcursorpagination",
-  "description": "Facebook's like cursor pagination for Laravel/Lumen",
-  "homepage": "https://github.com/tehekone/laravelcursorpagination",
+  "name": "tehekone/cursor-pagination",
+  "description": "Facebook's like cursor pagination for Laravel",
+  "homepage": "https://github.com/tehekone/cursorpagination",
   "license": "MIT",
   "keywords": [
     "laravel",
@@ -20,28 +20,16 @@
     "illuminate/http": "5.5.*||5.6.*||5.7.*||5.8.*",
     "illuminate/database": "5.5.*||5.6.*||5.7.*||5.8.*"
   },
-  "require-dev": {
-    "orchestra/testbench": "~3.5",
-    "phpunit/phpunit": "~6.0"
-  },
   "autoload": {
     "psr-4": {
-      "TehekOne\\LaravelCursorPagination\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "TehekOne\\LaravelCursorPagination\\Tests\\": "tests/"
+      "TehekOne\\CursorPagination\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "TehekOne\\LaravelCursorPagination\\CursorPaginationServiceProvider"
-      ],
-      "aliases": {
-        "CursorPagination": "TehekOne\\LaravelCursorPagination\\CursorPagination"
-      }
+        "TehekOne\\CursorPagination\\CursorPaginationServiceProvider"
+      ]
     }
   }
 }

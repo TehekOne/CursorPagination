@@ -1,11 +1,11 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination\Http\Resources\Json;
+namespace TehekOne\CursorPagination\Http\Resources\Json;
 
 /**
  * Class CursorResourceCollection
  *
- * @package TehekOne\LaravelCursorPagination\Http\Resources\Json
+ * @package TehekOne\CursorPagination\Http\Resources\Json
  */
 class CursorResourceCollection extends CursorCollection
 {

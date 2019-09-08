@@ -1,13 +1,13 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination\Http\Resources\Json;
+namespace TehekOne\CursorPagination\Http\Resources\Json;
 
 use Illuminate\Http\Resources\Json\Resource as BaseResource;
 
 /**
  * Class Resource
  *
- * @package TehekOne\LaravelCursorPagination\Http\Resources\Json
+ * @package TehekOne\CursorPagination\Http\Resources\Json
  */
 class Resource extends BaseResource
 {

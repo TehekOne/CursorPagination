@@ -1,6 +1,6 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination\Http\Resources\Json;
+namespace TehekOne\CursorPagination\Http\Resources\Json;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\PaginatedResourceResponse;
@@ -8,7 +8,7 @@ use Illuminate\Http\Resources\Json\PaginatedResourceResponse;
 /**
  * Class CursorResourceResponse
  *
- * @package TehekOne\LaravelCursorPagination\Http\Resources\Json
+ * @package TehekOne\CursorPagination\Http\Resources\Json
  */
 class CursorResourceResponse extends PaginatedResourceResponse
 {

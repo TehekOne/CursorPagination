@@ -1,11 +1,11 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination\Pagination;
+namespace TehekOne\CursorPagination\Pagination;
 
 /**
  * Class Cursor
  *
- * @package TehekOne\LaravelCursorPagination\Pagination
+ * @package TehekOne\CursorPagination\Pagination
  */
 class Cursor
 {

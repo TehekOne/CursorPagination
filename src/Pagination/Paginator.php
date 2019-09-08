@@ -1,6 +1,6 @@
 <?php
 
-namespace TehekOne\LaravelCursorPagination\Pagination;
+namespace TehekOne\CursorPagination\Pagination;
 
 use ArrayAccess;
 use Countable;
@@ -17,7 +17,7 @@ use JsonSerializable;
 /**
  * Class Paginator
  *
- * @package TehekOne\LaravelCursorPagination\Pagination
+ * @package TehekOne\CursorPagination\Pagination
  */
 class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Countable, IteratorAggregate, JsonSerializable, Jsonable, PaginatorContract
 {
