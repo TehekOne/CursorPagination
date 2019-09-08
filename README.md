@@ -9,7 +9,7 @@ This package provides a cursor based pagination already integrated with Laravel'
 You can install this package via composer using:
 
 ```bash
-composer require tehekone/cursorpagination
+composer require tehekone/cursor-pagination
 ```
 
 ## Credits
