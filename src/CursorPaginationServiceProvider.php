@@ -4,6 +4,7 @@ namespace TehekOne\CursorPagination;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Query\Builder as QueryBuilder;
+use Illuminate\Support\ServiceProvider;
 use TehekOne\CursorPagination\Pagination\Paginator;
 
 /**
@@ -11,7 +12,7 @@ use TehekOne\CursorPagination\Pagination\Paginator;
  *
  * @package TehekOne\CursorPagination
  */
-class CursorPaginationServiceProvider
+class CursorPaginationServiceProvider extends ServiceProvider
 {
     public function boot()
     {
