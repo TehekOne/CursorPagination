@@ -3,6 +3,8 @@
 namespace TehekOne\CursorPagination;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\ServiceProvider;
 use TehekOne\CursorPagination\Pagination\Paginator;
@@ -27,9 +29,15 @@ class CursorPaginationServiceProvider extends ServiceProvider
         $macro = function ($limit = null, $columns = ['*']) {
             $options = [];
 
-            $query_orders = isset($this->query)
-                ? collect($this->query->orders)
-                : collect($this->orders);
+            $builder = $this;
+
+            if ($this instanceof BelongsToMany || $this instanceof HasManyThrough) {
+                $builder = $this->getQuery();
+            }
+
+            $query_orders = method_exists($builder, 'getQuery')
+                ? collect($builder->getQuery()->orders)
+                : collect($builder->orders);
 
             $identifierSort = null;
 
@@ -37,7 +45,8 @@ class CursorPaginationServiceProvider extends ServiceProvider
                 $identifierSort = $query_orders->first();
                 $options['identifier'] = $identifierSort['column'];
             } else {
-                $options['identifier'] = isset($this->model) ? $this->model->getKeyName() : 'id';
+                $options['identifier'] = method_exists($builder,
+                    'getModel') ? $builder->getModel()->getKeyName() : 'id';
             }
 
             $cursor = Paginator::resolve();
@@ -63,5 +72,8 @@ class CursorPaginationServiceProvider extends ServiceProvider
 
         EloquentBuilder::macro('cursorPaginate', $macro);
         QueryBuilder::macro('cursorPaginate', $macro);
+
+        HasManyThrough::macro('cursorPaginate', $macro);
+        BelongsToMany::macro('cursorPaginate', $macro);
     }
 }
